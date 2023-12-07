@@ -1,3 +1,13 @@
+__pycache__/
+calibration/*.*
+calibration-frames/*.*
+saves/*/
+saves/*.*
+videos/*.*
+imgs/*
+
+
+!*/.gitkeep
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,0 +1,4 @@
+video_path : "videos/IMG_0359.MOV"
+saves_meta : "saves/meta.yaml"
+select_save : ""
+calibration_file : "calibration/calibration.yaml"
