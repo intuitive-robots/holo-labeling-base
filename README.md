@@ -8,7 +8,6 @@ the working application can be found under
 https://github.com/intuitive-robots/human-demonstration-ar/tree/labeling
 
 ## Structure
-
 ```
     _
     |- calibration         # after a camera calibration the result will be stored here 
@@ -18,3 +17,19 @@ https://github.com/intuitive-robots/human-demonstration-ar/tree/labeling
     |- saves               # Uploaded data from the hololens will be put here
     |- videos              # videos to test can be stored here
 ```
+## Scripts
+### calibration.py
+- Extracts camera calibration data from the images saved in calibration-frames
+- Images have to contain an calibration checkerboard (https://markhedleyjones.com/projects/calibration-checkerboard-collection)
+- Outputs the data to ```calibration\calibration.yaml```
+### drifter.py
+- Opens a websocket server to receive hololens connections
+- Saves incoming data to a file in ```saves/``` (the last saved file will be stored in ```saves/meta.yaml```)
+### fileio.py
+- Utility for file loading and saving
+### video2label.py
+- Visualizer for the saved data 
+
+
+
+
