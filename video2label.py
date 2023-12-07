@@ -84,6 +84,7 @@ def from_cam(cap: cv2.VideoCapture, qr_detector: cv2.QRCodeDetector, cmtx, dist,
     if not cap.isOpened: 
         print("Invalid video file specified")
 
+    index = 0
     while True:
         ret, img = cap.read()
         if not ret: break
@@ -98,8 +99,12 @@ def from_cam(cap: cv2.VideoCapture, qr_detector: cv2.QRCodeDetector, cmtx, dist,
         if ret: 
             for data in bboxes:
                 draw_bbox_from_3d(img, data, rvec, tvec, cmtx, dist)
+            cv2.imwrite(f'imgs/frame{index}.png', img) 
+            index += 1
+
 
         cv2.imshow('thres', img)
+
         if writer: writer.write(img)
 
         k = cv2.waitKey(20)
