@@ -9,7 +9,7 @@ https://github.com/intuitive-robots/human-demonstration-ar/tree/labeling
 
 ## Structure
 ```
-    _
+  ___
     |- calibration         # after a camera calibration the result will be stored here 
     |- calibration-frames  # Only the images put here will be used by calibration.py
     |- doc                 # documentation 
